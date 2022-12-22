@@ -1,0 +1,19 @@
+.setting{
+    color: rgb(13, 16, 16) !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .setting {
+      animation: setting-spin infinite 5s linear;
+    }
+  }
+
+@keyframes setting-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+

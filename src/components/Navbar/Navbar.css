@@ -1,0 +1,10 @@
+.nav{
+    background-color:rgb(39, 0, 139);
+    height: 70px;
+    position:sticky;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    
+
+}
