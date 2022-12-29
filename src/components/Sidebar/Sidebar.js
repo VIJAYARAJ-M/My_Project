@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 //import {FaBars} from "react-icons/fa"
 import { NavLink} from "react-router-dom";
 //import { menuItem } from "./MenuItems";
@@ -11,14 +11,23 @@ import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import {AiOutlineClose} from "react-icons/ai"
 import {AiFillSetting} from "react-icons/ai"
+import {RiReactjsLine} from "react-icons/ri"
+import { Row, Col, Button } from "reactstrap";
+import useLocalStorage from 'use-local-storage'
+import ToggleButton from "react-theme-toggle-button";
+import "react-theme-toggle-button/dist/index.css";
+import {UserContext} from "../../App"
+import { MDBSwitch } from 'mdb-react-ui-kit';
 
 const Right =styled.div`
 
-    background: aqua;
+    background:var(--background);
     height:100vh;
-    width: 250;
+    width: 300px;
     right:  ${({isright}) => (isright ? '0' : '-100%')};
     position: fixed;
+   
+    padding:20px;
     z-index: 20;
     
  
@@ -27,6 +36,7 @@ const Right =styled.div`
 
 
 export default function Sidebar({children}){
+
     
   const[isopen, setopen] = useState(false);
   const toggle = () => setopen(!isopen);
@@ -37,15 +47,17 @@ export default function Sidebar({children}){
         setopen1(!isright);
         
     }  
+
+    const auth = useContext(UserContext);
     
     return(
-     
-        <div className="container">
+       
+         <div className="containers" data-theme={auth.theme}>
             
            
-            <div style={{width: isopen ? "200px" : "50px"}} className="sidebar" >
+            <div style={{width: isopen ? "200px" : "60px"}} className="sidebar" >
                       <div className="top">
-                            <h1 style={{display: isopen ? "block" : "none"}}  className="">Logo</h1>
+                            <h5 style={{display: isopen ? "block" : "none"}}  className="">Prowesstics</h5>
                             <div style={{marginLeft: isopen ? "50px" : "0px"}} className="bar">
                               <FaBars onClick={toggle}/>
                             </div>
@@ -65,23 +77,46 @@ export default function Sidebar({children}){
             </div>
              
             
-                <Right isright={isright}>
-                    <div>
-                    <h2 >kdsjds;djsscscas</h2>
-                    <AiOutlineClose onClick={toggle1}/>
-                    </div>
+                <Right isright={isright} >
+                  
+                    <Row className="">
+                      <Col lg={10} className="">
+                        <h5 >Dashboard Theme</h5>
+                      </Col>
+                      <Col lg={2} className="d-flex justify-content-end">
+                         <AiOutlineClose color="var(--text-primary)" onClick={toggle1} size="2rem"/>
+                      </Col>
+                    </Row>
+                    
+                  
+                   <Row className="mt-4">
+                    <Col>
+                     <h4>Light/Dark</h4>
+                    </Col>
+                    <Col className="d-flex justify-content-center">
+                     <MDBSwitch id='flexSwitchCheckDefault' label='' onClick={auth.color}/>
+                    </Col>
+                   </Row>
+
+                    
+
+                    
+                    
+
+                    
+                
                 </Right>
                 
            
            
            
-            <main style={{width:"100%",height:"auto",backgroundColor:"#e0e0e0",marginLeft: isopen ? "200px" : "50px",
+            <main style={{width:"100%",height:"auto",backgroundColor:"#051139",marginLeft: isopen ? "200px" : "60px",
              padding:"",display:"", flexDirection:""}}>
                 
                 
                     <Nav/>
                 
-                <div style={{backgroundColor:"red", marginTop:"80px"}}>
+                <div style={{backgroundColor:"", marginTop:""}}>
                    {children}
                 </div>
 
@@ -89,7 +124,7 @@ export default function Sidebar({children}){
                 <div className="footer">
                     <div>
                         <button className="" /*onClick={switchTheme}*/ 
-                                style={{borderRadius:"10px"}}><AiFillSetting onClick={toggle1} size="2rem" className="setting"/>
+                                style={{borderRadius:"10px"}}><RiReactjsLine onClick={toggle1} size="2rem" className="setting"/>
                         </button>
                         
                     </div>
@@ -104,6 +139,7 @@ export default function Sidebar({children}){
        
             
         </div>
+        
         
     );
 }

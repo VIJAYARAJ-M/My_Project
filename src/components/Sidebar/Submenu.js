@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+
   
-const SidebarLink = styled(Link)`
+const SidebarLinks = styled(Link)`
   display: flex;
-  color: #e1e9fc;
+  color: var(--text-primary);
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px !important;
   list-style: none;
-  height: 30px;
+  height: 60px;
   text-decoration: none;
   font-size: 18px;
   
@@ -20,23 +21,23 @@ const SidebarLink = styled(Link)`
   }
 `;
   
-const SidebarLabel = styled.span`
+const SidebarLabels = styled.span`
   margin-left: 16px;
-  color:white;
+  color:var(--text-primary) ;
 `;
   
-const DropdownLink = styled(Link)`
-  background: #252831;
+const DropdownLinks = styled(Link)`
+  background:var(--background);
   height: 60px;
   padding-left: 2rem;
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #f5f5f5;
+  color:var(--text-primary);
   font-size: 18px;
   
   &:hover {
-    background: green;
+    background: #252831;
     cursor: pointer;
   }
 `;
@@ -49,12 +50,12 @@ export default function SubMenu({ item})  {
   
   return (
     <>
-      <SidebarLink to={item.path} 
+      <SidebarLinks to={item.path} 
       onClick={item.subNav && showSubnav}>
         <div>
           
           {item.icon}
-          {item.expand && <SidebarLabel >{item.name}</SidebarLabel>}
+          {item.expand && <SidebarLabels >{item.name}</SidebarLabels>}
         </div>
         {item.expand && <div>
           {item.subNav && subnav
@@ -64,15 +65,15 @@ export default function SubMenu({ item})  {
             : null}
         </div>}
         
-      </SidebarLink>
+      </SidebarLinks>
       {(subnav && item.expand ) &&
         item.subNav.map((item, index) => {
           return (
          
-            <DropdownLink to={item.path} key={index}>
+            <DropdownLinks to={item.path} key={index}>
               {item.icon}
-              <SidebarLabel>{item.title}</SidebarLabel>
-            </DropdownLink>
+              <SidebarLabels>{item.title}</SidebarLabels>
+            </DropdownLinks>
             
           );
         })}
