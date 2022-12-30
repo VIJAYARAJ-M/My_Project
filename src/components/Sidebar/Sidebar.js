@@ -55,10 +55,10 @@ export default function Sidebar({children}){
          <div className="containers" data-theme={auth.theme}>
             
            
-            <div style={{width: isopen ? "200px" : "60px"}} className="sidebar" >
+            <div style={{width: isopen ? "250px" : "60px"}} className="sidebar" >
                       <div className="top">
                             <h5 style={{display: isopen ? "block" : "none"}}  className="">Prowesstics</h5>
-                            <div style={{marginLeft: isopen ? "50px" : "0px"}} className="bar">
+                            <div style={{marginLeft: isopen ? "90px" : "0px"}} className="bar">
                               <FaBars onClick={toggle}/>
                             </div>
                       </div>
@@ -110,7 +110,7 @@ export default function Sidebar({children}){
            
            
            
-            <main style={{width:"100%",height:"auto",backgroundColor:"#051139",marginLeft: isopen ? "200px" : "60px",
+            <main style={{width:"100%",height:"auto",backgroundColor:"#051139",marginLeft: isopen ? "250px" : "60px",
              padding:"",display:"", flexDirection:""}}>
                 
                 
