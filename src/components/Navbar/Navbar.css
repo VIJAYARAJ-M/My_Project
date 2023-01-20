@@ -1,4 +1,4 @@
-.nav{
+.topnav{
     background-color:var(--background);
     height: 70px;
     position:sticky;
@@ -6,6 +6,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    z-index: 99;
     
 
 }
@@ -17,4 +18,5 @@
     justify-content: center;
     align-items: center;
     border-radius: 30px !important;
+  
 }

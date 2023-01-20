@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import {AiOutlineClose} from "react-icons/ai"
 import {AiFillSetting} from "react-icons/ai"
 import {RiReactjsLine} from "react-icons/ri"
-import { Row, Col, Button } from "reactstrap";
+import { Row, Col, Button, Badge } from "reactstrap";
 import useLocalStorage from 'use-local-storage'
 import ToggleButton from "react-theme-toggle-button";
 import "react-theme-toggle-button/dist/index.css";
@@ -21,14 +21,14 @@ import { MDBSwitch } from 'mdb-react-ui-kit';
 
 const Right =styled.div`
 
-    background:var(--background);
+    background:var(--index-bg);
     height:100vh;
     width: 300px;
     right:  ${({isright}) => (isright ? '0' : '-100%')};
     position: fixed;
    
     padding:20px;
-    z-index: 20;
+    z-index: 100;
     
  
 `;
@@ -91,12 +91,23 @@ export default function Sidebar({children}){
                   
                    <Row className="mt-4">
                     <Col>
-                     <h4>Light/Dark</h4>
+                     <h4>Theme</h4>
                     </Col>
                     <Col className="d-flex justify-content-center">
                      <MDBSwitch id='flexSwitchCheckDefault' label='' onClick={auth.color}/>
                     </Col>
                    </Row>
+
+                  
+                   
+                   <Row>
+                    <Col>
+                    
+                    </Col>
+                   </Row>
+
+                    
+                  
 
                     
 
@@ -110,7 +121,8 @@ export default function Sidebar({children}){
            
            
            
-            <main style={{width:"100%",height:"auto",backgroundColor:"#051139",marginLeft: isopen ? "250px" : "60px",
+            <main style={{width: isopen ? "81%" : "100%",height:"auto",backgroundColor:"var(--index-bg)",
+            marginLeft: isopen ? "250px" : "60px",
              padding:"",display:"", flexDirection:""}}>
                 
                 

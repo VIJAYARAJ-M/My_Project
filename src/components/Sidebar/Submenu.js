@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import {NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
+import { useRef } from "react";
 
   
 const SidebarLinks = styled(Link)`
@@ -13,12 +14,20 @@ const SidebarLinks = styled(Link)`
   height: 60px;
   text-decoration: none;
   font-size: 18px;
+  cursor: pointer;
   
   &:hover {
-    background: #e0e0e0;
+    background: var(--hover-bg);
     border-left: 4px solid var(--hover-border);
     cursor: pointer;
+    
   }
+  &.active {
+    
+    background: var(--hover-bg);
+   
+  }
+  
 `;
   
 const SidebarLabels = styled.span`
@@ -37,8 +46,14 @@ const DropdownLinks = styled(Link)`
   font-size: 18px;
   
   &:hover {
-    background: #252831;
+    background:  var(--hover-bg);
+    border-left: 4px solid var(--hover-border);
     cursor: pointer;
+  }
+  &.active {
+    
+    background: var(--hover-bg);
+   
   }
 `;
   
@@ -50,9 +65,9 @@ export default function SubMenu({ item})  {
   
   return (
     <>
-      <SidebarLinks to={item.path} 
-      onClick={item.subNav && showSubnav}>
-        <div>
+      <SidebarLinks activeStyle  to={item.path} 
+      onClick={item.subNav && showSubnav}  >
+        <div >
           
           {item.icon}
           {item.expand && <SidebarLabels >{item.name}</SidebarLabels>}

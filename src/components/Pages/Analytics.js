@@ -150,7 +150,7 @@ const optionsdount= {
     position: "bottom",
     labels: {
     
-    colors:"white",
+    colors:"var(--text-primary)",
     
     }
   },
@@ -193,7 +193,7 @@ const options11= {
     position: "bottom",
     labels: {
     
-    colors:"white",
+    colors:"var(--text-primary)",
     
     }
   },
@@ -232,7 +232,7 @@ const options111={
   title: {
     text: 'Users',
     style:{
-     color:"white",
+     color:"var(--text-primary)",
     },
   },
   dataLabels: {
@@ -244,7 +244,7 @@ const options111={
     position: "bottom",
     labels: {
     
-    colors:"white",
+    colors:"var(--text-primary)",
     
     }
   },
@@ -253,7 +253,7 @@ const options111={
     type: 'datetime',
     labels:{
       style:{
-        colors:"white",
+        colors:"var(--text-primary)",
         
       },
 },
@@ -262,12 +262,12 @@ const options111={
     title: {
       text: 'New Users',
       style:{
-        color:"white",
+        color:"var(--text-primary)",
       }
     },
     labels:{
       style:{
-        colors:"white",
+        colors:"var(--text-primary)",
         
       },
 },
@@ -277,12 +277,12 @@ const options111={
     title: {
       text: 'Users',
       style:{
-        color:"white"
+        color:"var(--text-primary)"
       }
     },
     labels:{
       style:{
-        colors:"white",
+        colors:"var(--text-primary)",
         
       },
 },
@@ -311,7 +311,7 @@ const optionssclick={
   title: {
     text: 'Email click Categories',
     style:{
-      color:"white",
+      color:"var(--text-primary)",
     }
   },
   dataLabels: {
@@ -323,7 +323,7 @@ const optionssclick={
     position: "bottom",
     labels: {
     
-    colors:"white",
+    colors:"var(--text-primary)",
     
     }
   },
@@ -332,7 +332,7 @@ const optionssclick={
     type: 'datetime',
     labels:{
       style:{
-        colors:"white",
+        colors:"var(--text-primary)",
         
       },
 },
@@ -341,12 +341,12 @@ const optionssclick={
     title: {
       text: 'Email Click',
       style:{
-        color:"white",
+        color:"var(--text-primary)",
       },
     },
     labels:{
       style:{
-        colors:"white",
+        colors:"var(--text-primary)",
         
       },
 },
@@ -356,12 +356,12 @@ const optionssclick={
     title: {
       text: 'Email Unclick',
       style:{
-        color:"white",
+        color:"var(--text-primary)",
       },
     },
     labels:{
       style:{
-        colors:"white",
+        colors:"var(--text-primary)",
         
       },
 },
@@ -392,7 +392,7 @@ const optionss={
   title: {
     text: 'Undelivered Sources',
     style:{
-       color:"white",
+       color:"var(--text-primary)",
     },
   },
   dataLabels: {
@@ -405,7 +405,7 @@ const optionss={
     position: "bottom",
     labels: {
     
-    colors:"white",
+    colors:"var(--text-primary)",
     
     }
   },
@@ -413,7 +413,7 @@ const optionss={
     type: 'datetime',
     labels:{
       style:{
-        colors:"white",
+        colors:"var(--text-primary)",
         
       },
 },
@@ -423,12 +423,12 @@ const optionss={
     title: {
       text: 'Spam Emails',
       style:{
-        color:"white",
+        color:"var(--text-primary)",
      },
     },
     labels:{
       style:{
-        colors:"white",
+        colors:"var(--text-primary)",
         
       },
 },
@@ -438,12 +438,12 @@ const optionss={
     title: {
       text: 'Wrong Emails',
       style:{
-        color:"white",
+        color:"var(--text-primary)",
      },
     },
     labels:{
       style:{
-        colors:"white",
+        colors:"var(--text-primary)",
         
       },
 },
@@ -488,7 +488,7 @@ const  series22= [{
       categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
        labels:{
       style:{
-        colors:"white",
+        colors:"var(--text-primary)",
         
       },
 },
@@ -497,12 +497,12 @@ const  series22= [{
       title: {
         text: 'Email Open & Unopen',
         style:{
-         color:"white",
+         color:"var(--text-primary)",
         }
       },
       labels:{
         style:{
-          colors:"white",
+          colors:"var(--text-primary)",
           
         },
   },
@@ -522,7 +522,7 @@ const  series22= [{
       position: "bottom",
       labels: {
       
-      colors:"white",
+      colors:"var(--text-primary)",
       
       }
     },
@@ -715,7 +715,7 @@ export default function Email(){
               <Card className="p-2"  style={{backgroundColor:"var(--background)"}}>
               
 
-              <ReactApexChart options={option22} series={series22} type="bar" height={200} />
+              <ReactApexChart options={option22} series={series22} type="bar" height={250} />
 
     
 
@@ -784,7 +784,7 @@ export default function Email(){
               <Row>
               <Col>
                 <Card className="p-2"  style={{backgroundColor:"var(--background)"}}>
-                <ReactApexChart options={optionssclick} series={seriessclick} type="line" height={200} />
+                <ReactApexChart options={optionssclick} series={seriessclick} type="line" height={220} />
 
                 </Card>
                 </Col>
@@ -871,68 +871,12 @@ export default function Email(){
                 </Col>
                 <Col lg={8}>
                 <Card className="p-3"  style={{backgroundColor:"var(--background)"}}>
-                <ReactApexChart options={options111} series={series111} type="line" height={490} />
+                <ReactApexChart options={options111} series={series111} type="line" height={570} />
                 </Card>
                 </Col>
             </Row>
 
-           <Row className="mt-3">
-                
-                
-                        <Col className="mb-5 mb-xl-0 " xl="12" style={{}}>
-                            <Card className="" style={{boxShadow:"",backgroundColor:"var(--background)",height:"400px",
-                            /*backgroundImage:"linear-gradient(to right, #133D7A 0%, #3759B2 100%)",*/
-                            border:"0px"
-                            /*boxShadow:"10px 10px 15px #9b9b9b, -10px -10px 15px #ffffff"*/
-                            /*boxShadow:"inset 2px 2px 5px #e7e7e7, inset -3px -3px 7px #bbbec3",backgroundColor:"#F8F8F8"*/}}>
-                            <CardHeader className="border-0" 
-                            style={{ backgroundColor:"var(--background)",/*backgroundImage:"linear-gradient(to right, #133D7A 0%, #3759B2 100%)",*/
-                            border:"0px"}}>
-                                <Row className="align-items-center">
-                                <div className="col">
-                                    <h3 className="mb-0 ">Table</h3>
-                                </div>
-                                
-                                </Row>
-                            
-                            
-                            </CardHeader>
-                            <Table className="align-items-center  table-flush" responsive >
-                            <thead className="">
-                            <tr className="" style={{color:"#FFB178"}}>
-                                <th scope="col">Date</th>
-                                <th scope="col">Campaign Name</th>
-                                <th scope="col">User</th>
-                                <th scope="col">New User</th>
-                                <th scope="col">Bounce Rate</th>
-                                
-                            </tr>
-                            </thead>
-                            {table.map((item, index)=>(
-                            <tbody  >
-                            <tr key={index} className="black" >
-                                <td scope="row">{item.date}</td>
-                                <td scope="row">{item.name}</td>
-                                <td>{item.user}</td>
-                                <td>{item.newuser}</td>
-                                <td>{item.bouncerate}</td>
-                               
-                            
-                            </tr>
-                        
-                        
-                        
-                            
-                            </tbody>
-                            ))}
-                        </Table>
-                            </Card>
-                        </Col>
-                        
-                        
-                    
-                    
-           </Row>
+          
 
           
            

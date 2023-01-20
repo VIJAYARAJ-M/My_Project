@@ -5,7 +5,7 @@ import profile from "../../Image/new.png"
 
 export default function Nav(){
     return(
-        <div className="nav ">
+        <div className="topnav ">
             <Col lg={2} className="d-flex justify-content-center align-items-center">
             <h5 style={{color:"var(--text-primary)"}} >Dashboard</h5>
             </Col>
@@ -19,7 +19,7 @@ export default function Nav(){
               <Row>
                 <Col lg={3} className="d-flex justify-content-center align-items-center">
                     <Card className="profile">
-                     <img src={profile} height={30} width={40}/>
+                     <img src={profile} height={40} style={{borderRadius:"20px"}}/>
                     </Card>
                 </Col>
                 <Col lg={9} className="d-flex justify-content-center align-items-center">
