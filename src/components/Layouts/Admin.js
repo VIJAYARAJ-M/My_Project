@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink as Link } from 'react-router-dom';
+import {Link} from "react-router-dom";
 import styled from 'styled-components';
 
 const Nav = styled.nav`
@@ -12,8 +12,9 @@ const Nav = styled.nav`
   /* Third Nav */
   /* justify-content: flex-start; */
 `;
-  
-const NavLink = styled(Link)`
+         
+
+const MenuLink = styled(Link)`
   color: #808080;
   display: flex;
   align-items: center;
@@ -86,29 +87,24 @@ export const NavBtn = styled.nav`
 `;
 
 export default function Admin(){
+  
     return(
         <div>
+         
            <Nav>
-                
-        
-                <NavMenu>
-                    <NavLink to='/login' activeStyle>
+             <NavMenu>
+              
+                    <MenuLink to='/login' activeStyle>
                         Login
-                    </NavLink>
-                    <NavLink to='/register' activeStyle>
+                    </MenuLink>
+                    <MenuLink to='/register' activeStyle>
                         Register
-                    </NavLink>
-                    <NavLink to='/main' activeStyle>
+                    </MenuLink>
+                    <MenuLink to='/main' activeStyle>
                         Dashboard
-                    </NavLink>
-                    
-                {/* Second Nav */}
-                {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
-                </NavMenu>
-                <NavBtn>
-                <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-                </NavBtn>
-      </Nav>
+                    </MenuLink>
+             </NavMenu>   
+           </Nav>
         </div>
     );
 }

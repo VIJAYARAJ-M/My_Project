@@ -836,7 +836,7 @@ export default function EmailCampaign1(){
                             </CardHeader>
                             <Table className="align-items-center  table-flush" responsive >
                             <thead className="">
-                            <tr className="" style={{color:"#FFB178"}}>
+                            <tr className="" style={{color:"#FFB178",backgroundColor:"#344d7f"}}>
                                 <th scope="col">Date</th>
                                 <th scope="col">Subject Name</th>
                                 <th scope="col">User</th>

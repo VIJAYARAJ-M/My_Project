@@ -22,6 +22,7 @@ import { MDBSwitch } from 'mdb-react-ui-kit';
 const Right =styled.div`
 
     background:var(--index-bg);
+    box-shadow:var(--box-shadow);
     height:100vh;
     width: 300px;
     right:  ${({isright}) => (isright ? '0' : '-100%')};
@@ -128,7 +129,7 @@ export default function Sidebar({children}){
                 
                     <Nav/>
                 
-                <div style={{backgroundColor:"", marginTop:""}}>
+                <div style={{backgroundColor:"", marginTop:"",width:""}}>
                    {children}
                 </div>
 

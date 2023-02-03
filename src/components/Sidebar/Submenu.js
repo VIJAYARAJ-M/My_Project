@@ -33,6 +33,8 @@ const SidebarLinks = styled(Link)`
 const SidebarLabels = styled.span`
   margin-left: 16px;
   color:var(--text-primary) ;
+  font-size:16px;
+  font-family: serif;
 `;
   
 const DropdownLinks = styled(Link)`

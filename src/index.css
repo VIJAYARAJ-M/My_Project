@@ -12,18 +12,20 @@ code {
     monospace;
 }
 :root {
-  --background: #fff;
+  --background: #e0e0e0;
   --text-primary: black;
   --text-secondary: royalblue;
   --accent: purple;
   --hover-border:rgb(13, 15, 13);
-  --hover-bg:#bdbdbd;
-  --index-bg:#e0e0e0;
-  --tab-bg:#e0e0e0;
-  --border-color: #b0bac5 #9aa2ab #e0e0e0;
-  --textbox:#b6b1b1;
+  --hover-bg:#aaa5a5;
+  --index-bg:#bdbdbd;
+  --tab-bg:#bdbdbd;
+  --border-color: #e0e0e0 #e0e0e0 #bdbdbd;
+  --textbox:#bdbdbd;
   --scrollbar:#fff;
-  --social-card-bg:#e0e0e0;
+  --social-card-bg:#bdbdbd;
+  --box-shadow:0px 0px 3px 3px #fff;
+ --background-image: #bdbdbd;
 }
 [data-theme='dark'] {
   --background: #111c44;
@@ -35,9 +37,11 @@ code {
   --index-bg:#051139;
   --tab-bg:#051139 ;
   --border-color: #dee2e6 #dee2e6 #051139;
-  --textbox:#19335A ;
+  --textbox:#051139 ;
   --scrollbar:#111c44;
   --social-card-bg:#051139 ;
+  --box-shadow:0px 0px 3px 3px #fff;
+  --background-image:#051139 ;
   ;
 }
 
@@ -83,6 +87,7 @@ code {
 
 h1,h2,h3,h4,h5,h6{
   color: var(--text-primary);
+  font-family: serif;
 }
 .form-switch .form-check-input{
   height: 1.5em !important;

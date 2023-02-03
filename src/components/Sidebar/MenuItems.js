@@ -29,8 +29,8 @@ export const menuItem =[
               ]
         },
         {
-            path:"/about",
-            name:"Pipeline",
+            path:"/marketing",
+            name:"Marketing Analytics",
             icon:<AiOutlineApartment/>,
             iconClosed: <FiChevronDown/>,
             iconOpened: <FiChevronUp />,

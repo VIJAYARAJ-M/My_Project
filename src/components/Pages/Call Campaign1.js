@@ -198,7 +198,7 @@ export default function CallCampaign1(){
     return(
         <div>
             
-            <Row>
+            <Row className="mt-3">
                 <Col className="d-flex justify-content-center">
                   <h4 className="" style={{color:"var(--text-primary)"}}>Call Campaign Report</h4>
                 </Col>

@@ -115,7 +115,7 @@ export default function Social1(){
     return(
         <div>
          
-            <Row>
+            <Row className="mt-3">
                 <Col className="d-flex justify-content-center ">
                 <h4 className="" style={{color:"var(--text-primary)"}}>Social Media Campaign</h4>
                 </Col>
@@ -203,7 +203,7 @@ export default function Social1(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h5 className="" style={{color:"var(--text-primary)"}}>20,000</h5>
+                                <h5 className="" style={{color:"var(--text-primary)"}}>20000</h5>
                                 </Col>
                                 
                             </Row>
@@ -274,7 +274,7 @@ export default function Social1(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h5 className="" style={{color:"var(--text-primary)"}}>4,000</h5>
+                                <h5 className="" style={{color:"var(--text-primary)"}}>4000</h5>
                                 </Col>
                                 
                             </Row>
@@ -311,7 +311,7 @@ export default function Social1(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h5 className="" style={{color:"var(--text-primary)"}}>20,000</h5>
+                                <h5 className="" style={{color:"var(--text-primary)"}}>20000</h5>
                                 </Col>
                                 
                             </Row>
@@ -382,7 +382,7 @@ export default function Social1(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h5 className="" style={{color:"var(--text-primary)"}}>4,000</h5>
+                                <h5 className="" style={{color:"var(--text-primary)"}}>4000</h5>
                                 </Col>
                                 
                             </Row>
@@ -419,7 +419,7 @@ export default function Social1(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h5 className="" style={{color:"var(--text-primary)"}}>3,000</h5>
+                                <h5 className="" style={{color:"var(--text-primary)"}}>3000</h5>
                                 </Col>
                                 
                             </Row>
@@ -531,7 +531,7 @@ export default function Social1(){
                             </Row>
                             <Row>
                                 <Col className="d-flex justify-content-center">
-                                <h5 className="" style={{color:"var(--text-primary)"}}>20,000</h5>
+                                <h5 className="" style={{color:"var(--text-primary)"}}>20000</h5>
                                 </Col>
                                 
                             </Row>

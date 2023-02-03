@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes,Route, Switch  } from "react-router-dom";
+import { BrowserRouter as Router ,Routes, Route,Navigate,} from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Dashboard from "./components/Pages/Dashboard"
 import Login from "./components/Pages/Login"
@@ -8,24 +8,32 @@ import Email1 from "./components/Pages/Email";
 import Call from "./components/Pages/Call";
 import Social from "./components/Pages/Social";
 import Sms from "./components/Pages/Sms Campaign";
+import Marketing from "./components/Pages/Email Marketing";
+import Pipline from "./components/Pages/Pipeline";
 export default function MainPage(){
+
+      
+
     return(
         <div>
-        <BrowserRouter>
+        <Router>
           <Sidebar>
-              <Switch>
-                {/* <Route path="/" element={<Dashboard/>}/> */}
-                <Route path="/dash" component={Dashboard}/>
-                {/* <Route path="/about" component={Login}/> */}
-                <Route path="/analytics" component={Email}/>
-                <Route path="/email" component={Email1}/>
-                <Route path="/call" component={Call}/>
-                <Route path="/social" component={Social}/>
-                <Route path="/sms" component={Sms}/>
+              <Routes>
+               
+               <Route path="/" element={<Email/>} />
+               <Route path="/dash" element={<Dashboard/>} />
+               <Route path="/email" element={<Email1/>} />
+               <Route path="/call" element={<Call/>} />
+               <Route path="/social" element={<Social/>} />
+               <Route path="/sms" element={<Sms/>} />
+               <Route path="/analytics" element={<Email/>} />
+               <Route path="/marketing" element={<Marketing/>} />
+               <Route path="/pipe" element={<Pipline/>} />
+              
 
-              </Switch>
+              </Routes>
           </Sidebar>
-        </BrowserRouter>
+        </Router>
         </div>
     )
 }
