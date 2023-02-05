@@ -112,6 +112,13 @@ import Commands from "../../Image/Commands.png"
       },
   }
 export default function Social1(){
+
+    const Value=()=>{
+        var today = new Date("MM");
+          console.log("date",today)
+        
+    }
+    
     return(
         <div>
          
@@ -153,7 +160,7 @@ export default function Social1(){
 
                           <Row>
                             <Col>
-                             <input className="css-1s2u09g-control"  type='date'></input>
+                             <input className="css-1s2u09g-control" onChange={"2002-12-2"}  type='date'></input>
                             </Col>
                           </Row>
                           

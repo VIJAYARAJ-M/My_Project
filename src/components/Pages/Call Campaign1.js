@@ -290,7 +290,7 @@ export default function CallCampaign1(){
                             <Col lg={7}>
                             <Row>
                                 <Col className="d-flex justify-content-start">
-                                <h6 className="" style={{color:"var(--text-primary)"}}>Call Volume Rate</h6>
+                                <h6 className="" style={{color:"var(--text-primary)"}}>Call Volume<br/> Rate</h6>
                                 </Col>
                             </Row>
                             <Row>
